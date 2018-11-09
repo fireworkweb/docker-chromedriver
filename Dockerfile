@@ -29,4 +29,4 @@ RUN apt-get -y autoremove \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/*
 
-CMD [ "chromedriver", "--port=$CHROMEDRIVER_PORT", "--url-base=$CHROMEDRIVER_URL_BASE" "--whitelisted-ips=$CHROMEDRIVER_WHITELISTED_IPS" ]
+CMD [ "sh", "-c", "chromedriver --port=$CHROMEDRIVER_PORT --url-base=$CHROMEDRIVER_URL_BASE --whitelisted-ips=$CHROMEDRIVER_WHITELISTED_IPS" ]
